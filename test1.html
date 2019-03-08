@@ -5,26 +5,55 @@
 <head>
     <meta charset="utf-8">
     <title>HTML5 TEST</title>
+    <script src = "https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" 
+    href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 </head>
- <style>
-     .background {
-         background-color: rgb(108, 201, 245);
+ <style>    
+     button {
+         border:2px solid;
+         border-radius: 20px;
+         width: 80px;
+         height: 22px;
+         color: rgba(38, 96, 100, 0.5);
      }
+     #shadow {
+        box-shadow: 10px 10px 5px #888888;
+        width: 250px;
+        height: 60px;
+     }
+
  </style>
-<body>
-    <p>Hello World!</p>
+<body style="background: white;" >
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                $("li").hide(500);
+            });
+            $("#b2").click(function(){
+                $("li").show(500);
+            });
+        });
+    </script>
+    <h1 style="text-align:center; color: red; font-style: italic;" id = "greet" >Good Day!</h1>
     <p>This is a new page</p>
-    <a href = "README.md">Test </a>
-    <div class = "background">
+    <a href = "README.md">open</a>
+    <div id = "shadow">
     <ul>
-        <li>
-            <p>Nothing</p>
-            <p>Somthing</p>
-            <p>anything</p>
-        </li>
-        <button type="button">确定</button>
+        <li>Nothing</li>
+        <li>Somthing</li>
+        <li>anything</li>
     </ul>
     </div>
+    <button id = "b1">隐藏</button>
+    <button id = "b2">显示</button>
+    <a href="http://www.baidu.com/" target="iframe_1"><button>Click !</button></a>
+    <br>
+    <button onclick="show()">click it!</button>
+    <iframe name = "iframe_1" framebordder = "0" width="1000px" height="800px"></iframe>
+    <p style="text-align: right" id = "Date"></p>
+    <script type = "text/JavaScript" src = "test1.js"></script>
+
 </body>
 
 </html>
